@@ -1,0 +1,20 @@
+<% include ./partials/header.ejs %>
+<link rel="stylesheet" href="/stylesheets/singleBook.css">
+
+<div class="wrapper mt-[10%] absolute flex justify-center items-center w-full max-h-screen">
+
+    <div class="flexbox h-full max-w-full">
+        <div class="box">
+            <h3> <%= singleBook.title %> </h1>
+                <div class="scrollbar"  id="content-scroll">
+            <p class="third font-bold">Author: <em> <%= singleBook.author %> </em> </p>
+            <span class="third font-semibold">genre: <em> <%= singleBook.genre %> </em> </span><br>
+            <p class="third contents "> <%= singleBook.description %> </p>
+        </div>
+        </div>
+
+    </div>
+    
+</div>
+
+<% include ./partials/footer.ejs %>

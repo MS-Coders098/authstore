@@ -1,0 +1,31 @@
+<% include ./partials/header.ejs %>
+<link rel="stylesheet" href="/stylesheets/bookstore.css">
+
+
+<div
+    class="wrapper mt-[10%] absolute">
+
+    <div class="flexbox h-full w-full">
+        <% allBooks.forEach(book => { %>
+        <div class="box">
+            <h3> <%= book.title %> </h1>
+            <div class="scrollbar" id="content-scroll">
+                <p class="third font-bold">Author: <em> <%= book.author %> </em> </p>
+                <span class="third font-semibold">genre: <em> <%= book.genre %> </em>
+                </span><br>
+                <p class="third contents "> <%= book.description %> </p>
+            </div>
+            <div id="details" class="mt-5">Uploaded By:
+                <div class="text-center "> <%= book.user.fullname %> </div>
+                <div class="text-center "> <%= book.user.email %> </div>
+            </div>
+        </div>
+        <% }) %>
+
+    </div>
+
+</div>
+
+
+
+<% include ./partials/footer.ejs %>

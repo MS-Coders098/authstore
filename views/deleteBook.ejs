@@ -1,0 +1,11 @@
+<% include ./partials/header.ejs %>
+
+<div class="flex justify-center items-center w-full h-screen flex-col bg-zinc-700">
+  <p class="text-3xl font-bold text-zinc-900">Are You Sure You Want to delete this book?</p>
+  <form action="" method="post" class="mt-4">
+    <input type="submit" value="Delete" class="bg-red-500 mr-3 text-xl cursor-pointer px-4 py-3 mt-3 text-white font-semibold rounded ">
+    <a href="/showbooks" class="bg-zinc-400 text-xl cursor-pointer ml-3 px-4 py-3 mt-3 text-white font-semibold rounded">Cancel</a>
+  </form>
+</div>
+
+<% include ./partials/footer.ejs %>

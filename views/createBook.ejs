@@ -1,0 +1,30 @@
+<% include ./partials/header.ejs %>
+<link rel="stylesheet" href="/stylesheets/bookForm.css">
+
+<div class="bg-[#deb887] w-full h-screen relative">
+  <div class="fullcontent">
+    <div class="headings">
+      <h1>My Book Store</h1>
+      <h2>
+        Welcome to our literary haven, a digital sanctuary for bibliophiles – the epitome of the modern bookworm's paradise. Our book store project is a carefully curated space that seamlessly blends the charm of traditional bookstores with the convenience of the digital age. Immerse yourself in a vast collection spanning genres, from timeless classics to contemporary bestsellers. Our user-friendly interface ensures a delightful browsing experience, complete with personalized recommendations tailored to your literary preferences. Embrace the joy of discovery with our interactive features, including author spotlights, thematic book clubs, and real-time community discussions. Whether you're a seasoned reader or a novice exploring the world of literature, our book store is your gateway to a universe of stories, knowledge, and imagination. Step into a world where books come alive, connecting readers across borders and generations. Welcome to a new chapter in your reading journey.</h2>
+        <a href="/bookstore" class="text-white bg-green-500 px-4 py-2 mt-5 block w-[13.5vw] font-semibold text-lg rounded ">Preview All the Books</a>
+    </div>
+    <div class="formbox">
+      <h3>Post A Book</h3>
+      <form id="form" action="/createbook" method="post">
+        <label for="">Title</label>
+        <input type="text" name="title" required class="asd h-[2.8rem] px-2" />
+        <label for="">Author</label>
+        <input type="text" id="" name="author" required class="asd h-[2.8rem] px-2" />
+        <label for="">Genre</label>
+        <input type="text" id="" name="genre" required class="asd h-[2.8rem] px-2" />
+        <label for="description">Elaborate About Your Book</label>
+        <textarea name="description" id="description" required cols="30" rows="5" class="asd px-2 py-2"></textarea>
+        <input id="btn" type="submit" name="submit" value="Post Book" class="mainbox">
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<% include ./partials/footer.ejs %>

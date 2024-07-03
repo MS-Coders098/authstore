@@ -1,0 +1,32 @@
+<% include ./partials/header.ejs %>
+<link rel="stylesheet" href="/stylesheets/showBooks.css">
+
+<div class="w-full min-h-full bg-zinc-700 absolute">
+  <table class="table block mt-[10%] overflow-x-hidden overflow-y-auto">
+    <thead>
+      <th>S.No</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Further Details</th>
+    </thead>
+    <tbody>
+      <% books.books.forEach(function (book, index) { %>
+      <tr>
+        <td data-label="S.No"> <%= index+1 %> </td>
+        <td data-label="Title"> <%= book.title %> </td>
+        <td data-label="Author"> <%= book.author %> </td>
+        <td data-label="Genre"> <%= book.genre %> </td>
+        <td data-label="Further Details" class="  ">
+          <a href="/showbooks/<%= book._id %>"><i class="ri-eye-line text-2xl px-1 text-green-600"></i></a>
+          <a href="/updatebook/<%= book._id %>"><i class="ri-pencil-line text-2xl px-1"></i></a>
+          <a href="/deletebook/<%= book._id %>"><i class="ri-delete-bin-6-line text-2xl text-red-500 px-1"></i></a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+
+<% include ./partials/footer.ejs %>
